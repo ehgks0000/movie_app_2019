@@ -1,5 +1,4 @@
 import React from "react";
-import Potato from "./Potato";
 
 // import logo from './logo.svg';
 // import "./App.css";
