@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-//State
 class App extends React.Component {
-  //바꿀 데이터를 state 안에 넣자
+  //constructor render componentDidMount
+
+  constructor(props) {
+    super(props);
+    console.log("hellow");
+  }
   state = {
     count: 0,
   };
@@ -13,11 +17,14 @@ class App extends React.Component {
   add = () => {
     //이렇게 사용하는거 추천하지 않음 멋지지 않음
     // this.setState({ count: this.state.count + 1 });
-    this.setState((current) => ({ count: current.count + 1 }));
+    this.setState((state) => ({ count: state.count + 1 }));
   };
   minus = () => {
     this.setState({ count: this.state.count - 1 });
   };
+  componentDidMount() {} // 랜더 된 후
+  componentDidUpdate() {} // 다시 랜더 된 후
+  componentWillUnmount() {} //랜더가 종료 된 후
 
   render() {
     return (
